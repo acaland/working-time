@@ -1,0 +1,27 @@
+<Alloy>
+
+	<TabGroup>
+		<Tab title="today" >
+			<Window  class="container" title="Today clockings">
+				<RightNavButton>
+					<Button id="add_btn" systemButton="Ti.UI.iPhone.SystemButton.ADD" enabled="false" onClick="new_day"></Button>
+				</RightNavButton>
+				<TableView scrollable="false" id="times">
+					<TableViewRow id="t1" title="T1"></TableViewRow>
+					<TableViewRow id="t2" title="T2"></TableViewRow>
+					<TableViewRow id="t3" title="T3"></TableViewRow>
+					<TableViewRow id="t4" title="T4"></TableViewRow>
+
+				</TableView>
+				<Button id="ssbtn" onClick="start_n_stop">Start</Button>
+			</Window>
+		</Tab>
+		<Tab title="archives" >
+			<Window title="Archives">
+				<TableView dataCollection="archives">
+					 <TableViewRow title="{t1} | {t2} | {t3} | {t4}"/>
+				</TableView>
+			</Window>
+		</Tab>
+	</TabGroup>
+</Alloy>
